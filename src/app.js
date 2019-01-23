@@ -9,10 +9,12 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const appRoot = require('app-root-path');
 
 // Esoteric Resources
 const errorHandler = require( `./middleware/500.js`);
 const notFound = require( `./middleware/404.js` );
+const userRouter = require(appRoot + '/src/models/template-model/test.js');
 const v1Router = require( `./api/v1.js` );
 
 // Prepare the express app
@@ -29,7 +31,14 @@ app.use(express.urlencoded({extended:true}));
 app.use('/docs', express.static('docs'));
 
 // Routes
+app.use(userRouter);
 app.use(v1Router);
+// console.log({userRouter});
+
+// add logic to grab all outher routes and use if they exist
+//forEach file that exist in specified folder of root directory, we will app.use(filename);
+// 1. check to see if files exist
+
 
 // Catchalls
 app.use(notFound);
