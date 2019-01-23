@@ -10,12 +10,16 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const appRoot = require('app-root-path');
+const requireDirectory = require('require-directory');
 
 // Esoteric Resources
 const errorHandler = require( `./middleware/500.js`);
 const notFound = require( `./middleware/404.js` );
-const userRouter = require(appRoot + '/src/models/template-model/test.js');
 const v1Router = require( `./api/v1.js` );
+
+//finds new routes the user has added to the routes folder
+const userRoutes = require(`${appRoot}/src/api/routes/`);
+
 
 // Prepare the express app
 const app = express();
@@ -29,16 +33,19 @@ app.use(express.urlencoded({extended:true}));
 
 // Static Routes
 app.use('/docs', express.static('docs'));
+//add their docs static route
 
 // Routes
-app.use(userRouter);
+
+// Sets package router
 app.use(v1Router);
-// console.log({userRouter});
 
-// add logic to grab all outher routes and use if they exist
-//forEach file that exist in specified folder of root directory, we will app.use(filename);
-// 1. check to see if files exist
-
+// Sets additional user-provided routes, if provided
+Object.keys(userRoutes).forEach((file) => {
+  console.log(file);
+  const test = require(`${appRoot}/src/api/routes/${file}`);
+  app.use(test);
+});
 
 // Catchalls
 app.use(notFound);
