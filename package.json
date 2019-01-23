@@ -18,6 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
+    "cf-supergoose": "^1.0.2",
+    "cf401-mongo": "^1.0.0",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "jest": "^23.6.0",

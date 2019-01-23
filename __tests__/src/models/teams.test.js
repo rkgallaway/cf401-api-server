@@ -3,7 +3,7 @@
 const rootDir = process.cwd();
 const teams = require(`${rootDir}/src/models/teams/teams-model.js`);
 
-const supergoose = require('../supergoose.js');
+const supergoose = require('cf-supergoose');
 
 beforeAll(supergoose.startDB);
 afterAll(supergoose.stopDB);
