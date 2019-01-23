@@ -20,7 +20,7 @@
     "app-root-path": "^2.1.0",
     "cf-supergoose": "^1.0.2",
     "cf401-mongo": "^1.0.0",
-    "cf-model-finder": "^1.0.1",
+    "cf-model-finder": "^1.0.2",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
