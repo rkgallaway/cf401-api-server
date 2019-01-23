@@ -1,6 +1,6 @@
 {
   "name": "cf401-api-server",
-  "version": "1.0.6",
+  "version": "1.0.5",
   "description": "Basic Api Server",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "app-root-path": "^2.1.0",
     "cf-supergoose": "^1.0.2",
     "cf401-mongo": "^1.0.0",
-    "cf-model-finder": "^1.0.0",
+    "cf-model-finder": "^1.0.1",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
