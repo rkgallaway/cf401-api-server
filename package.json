@@ -1,7 +1,7 @@
 {
-  "name": "codefellows-api-server-solution-test",
-  "version": "1.0.2",
-  "description": "",
+  "name": "cf401js-api-server",
+  "version": "1.0.0",
+  "description": "Basic Api Server",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -14,7 +14,7 @@
     "testEnvironment": "node"
   },
   "keywords": [],
-  "author": "John Cokos / 401d28",
+  "author": "Ryan Gallaway",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
