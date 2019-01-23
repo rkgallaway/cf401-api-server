@@ -1,5 +1,5 @@
 {
-  "name": "cf401js-api-server",
+  "name": "cf401-api-server",
   "version": "1.0.0",
   "description": "Basic Api Server",
   "main": "index.js",
