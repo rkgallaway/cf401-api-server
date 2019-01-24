@@ -16,7 +16,7 @@ describe('Teams Model', () => {
         Object.keys(obj).forEach(key =>{
           expect(record[key]).toEqual(obj[key]);
         });
-      })
+      });
   });
 
   it('can get() a team', () => {

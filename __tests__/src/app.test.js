@@ -2,9 +2,8 @@
 
 const rootDir = process.cwd();
 const supergoose = require('cf-supergoose');
-const {server} = require('../../src/app.js');
-const mockRequest = supergoose.server(server);
-
+const {app} = require(`${rootDir}/src/app.js`);
+const mockRequest = supergoose.server(app);
 
 beforeAll(supergoose.startDB);
 afterAll(supergoose.stopDB);
@@ -14,7 +13,6 @@ describe('api server', () => {
   it('should respond with a 404 on an invalid route', () => {
 
     return mockRequest
-      .then(console.log(mockRequest))
       .get('/foo')
       .then(results => {
         expect(results.status).toBe(404);
