@@ -2,7 +2,7 @@
 
 ![Build Status](https://travis-ci.com/rkgallaway/cf401-api-server.svg?branch=master)
 
-cf401-api-server is a basic API server package that allows you to get a functional API-server up an running is as little time as it takes you to install the package.
+cf401-api-server is a basic API server package that allows you to get a functional API-server up and running in as little time as it takes you to install the package.
 
 ## About the Package
 - This package was created in tandem with the [cf-quick-start package](https://www.npmjs.com/package/cf-quick-start), which will help you get your projects set up quickly via the CLI
