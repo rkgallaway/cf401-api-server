@@ -17,7 +17,7 @@ const errorHandler = require(`./middleware/500.js`);
 const notFound = require(`./middleware/404.js`);
 const v1Router = require(`./api/v1.js`);
 
-const userRoutes = require(`${appRoot}/src/routes`);
+const userRoutes = requireDirectory(module, `${appRoot}/src/routes`);
 
 // Prepare the express app
 const app = express();
@@ -41,7 +41,6 @@ app.use(v1Router);
 
 //Sets additional user-provided routes, if provided    
 Object.keys(userRoutes).forEach((file) => {
-  console.log(file);
   const test = require(`${appRoot}/src/routes/${file}`);
   app.use(test);
 });
